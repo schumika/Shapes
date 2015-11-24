@@ -10,4 +10,6 @@
 
 @interface ShapeCollectionViewCell : UICollectionViewCell
 
+@property (nonatomic, weak) IBOutlet UILabel *shapeLabel;
+
 @end
