@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Shapes-->
@@ -62,6 +63,27 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Fqv-PD-H50"/>
                                 </connections>
                             </collectionView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="25" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bXm-9M-pIQ">
+                                <rect key="frame" x="627" y="30" width="89" height="166"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="89" id="fZO-Ig-Zek"/>
+                                    <constraint firstAttribute="height" constant="166" id="gML-xd-Y9x"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="wAu-vE-Qzf"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="qKQ-qj-h9F"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8kA-Ea-MlQ">
+                                <rect key="frame" x="666" y="0.0" width="50" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Menu ▾"/>
+                                <connections>
+                                    <action selector="menuButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n1r-BK-udC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -70,7 +92,11 @@
                             <constraint firstItem="bxV-oq-seB" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Bs5-tb-0Aa"/>
                             <constraint firstItem="bxV-oq-seB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="NrC-hv-To4"/>
                             <constraint firstAttribute="trailing" secondItem="bxV-oq-seB" secondAttribute="trailing" constant="-10" id="ODK-eA-rmd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8kA-Ea-MlQ" secondAttribute="trailing" id="VoB-lL-B9s"/>
+                            <constraint firstItem="bXm-9M-pIQ" firstAttribute="trailing" secondItem="8kA-Ea-MlQ" secondAttribute="trailing" id="Xsl-OS-gvI"/>
                             <constraint firstItem="bxV-oq-seB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ey8-7I-Ucs"/>
+                            <constraint firstItem="8kA-Ea-MlQ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="qoe-Nx-IfE"/>
+                            <constraint firstItem="bXm-9M-pIQ" firstAttribute="top" secondItem="8kA-Ea-MlQ" secondAttribute="bottom" id="y0P-AN-kPz"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
@@ -79,11 +105,13 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="collectionView" destination="bxV-oq-seB" id="aCf-aB-xk1"/>
+                        <outlet property="menuHeightConstraint" destination="gML-xd-Y9x" id="pIo-8O-EZ9"/>
+                        <outlet property="menuTableView" destination="bXm-9M-pIQ" id="Flg-gH-QUe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1318.5" y="438.5"/>
+            <point key="canvasLocation" x="1318" y="438"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8YO-hR-lZ5">
