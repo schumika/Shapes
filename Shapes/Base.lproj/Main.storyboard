@@ -64,7 +64,7 @@
                                 </connections>
                             </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="25" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bXm-9M-pIQ">
-                                <rect key="frame" x="627" y="30" width="89" height="166"/>
+                                <rect key="frame" x="637" y="30" width="89" height="166"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -80,9 +80,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7yF-sf-pkd">
-                                                    <rect key="frame" x="8" y="3" width="54" height="18"/>
+                                                    <rect key="frame" x="8" y="4" width="48" height="16"/>
                                                     <animations/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -131,7 +131,7 @@
                             <constraint firstItem="bxV-oq-seB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="NrC-hv-To4"/>
                             <constraint firstAttribute="trailing" secondItem="bxV-oq-seB" secondAttribute="trailing" constant="-10" id="ODK-eA-rmd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8kA-Ea-MlQ" secondAttribute="trailing" id="VoB-lL-B9s"/>
-                            <constraint firstItem="bXm-9M-pIQ" firstAttribute="trailing" secondItem="8kA-Ea-MlQ" secondAttribute="trailing" id="Xsl-OS-gvI"/>
+                            <constraint firstItem="bXm-9M-pIQ" firstAttribute="trailing" secondItem="8kA-Ea-MlQ" secondAttribute="trailing" constant="10" id="Xsl-OS-gvI"/>
                             <constraint firstItem="bxV-oq-seB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ey8-7I-Ucs"/>
                             <constraint firstItem="8kA-Ea-MlQ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="qoe-Nx-IfE"/>
                             <constraint firstItem="bXm-9M-pIQ" firstAttribute="top" secondItem="8kA-Ea-MlQ" secondAttribute="bottom" id="y0P-AN-kPz"/>

@@ -31,7 +31,9 @@
     self.shapesArray = @[@{@"Type":@"Animals",
                            @"Shapes":@[@"🐶", @"🐱", @"🐭", @"🐰", @"🐻", @"🦁", @"🐮", @"🐷", @"🐸", @"🐔", @"🐣", @"🐝", @"🐛", @"🐌", @"🐞", @"🐜", @"🐟", @"🐘", @"🐫", @"🐑"]},
                          @{@"Type":@"Food",
-                           @"Shapes":@[@"🍎", @"🍐", @"🍊" ,@"🍋", @"🍌", @"🍉", @"🍇", @"🍓", @"🍒", @"🍍"]}];
+                           @"Shapes":@[@"🍎", @"🍐", @"🍊" ,@"🍋", @"🍌", @"🍉", @"🍇", @"🍓", @"🍒", @"🍍"]},
+                         @{@"Type":@"Transport",
+                           @"Shapes":@[@"🚗", @"🚌", @"🚎", @"🚕", @"🚑", @"🚒", @"🚜", @"🚚", @"🏍", @"🚁", @"✈️", @"🚉", @"⛵️"]}];
     
     self.collectionView.pagingEnabled = YES;
     
@@ -74,6 +76,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     MenuTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"OptionCell" forIndexPath:indexPath];
     
+    if (indexPath.row == self.selectedShapeTypeIndex) {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    } else {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
+    
     cell.titleLabel.text = ((NSDictionary *)self.shapesArray[indexPath.row])[@"Type"];
     
     return cell;
@@ -83,6 +91,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     self.selectedShapeTypeIndex = indexPath.row;
+    
     [self menuButtonAction:nil];
 }
 
