@@ -1,15 +1,16 @@
 //
-//  ViewController.m
+//  ShapesViewController.m
 //  Shapes
 //
 //  Created by Anca Julean on 24/11/15.
 //  Copyright © 2015 Anca Julean. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "ShapesViewController.h"
 #import "ShapeCollectionViewCell.h"
+#import "MenuTableViewCell.h"
 
-@interface ViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UITableViewDataSource, UITableViewDelegate>
+@interface ShapesViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) NSArray *shapesArray;
 @property (nonatomic, assign) NSInteger selectedIndex;
@@ -22,7 +23,7 @@
 
 @end
 
-@implementation ViewController
+@implementation ShapesViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -71,13 +72,9 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"OptionCell"];
+    MenuTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"OptionCell" forIndexPath:indexPath];
     
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"OptionCell"];
-    }
-    
-    cell.textLabel.text = ((NSDictionary *)self.shapesArray[indexPath.row])[@"Type"];
+    cell.titleLabel.text = ((NSDictionary *)self.shapesArray[indexPath.row])[@"Type"];
     
     return cell;
 }
