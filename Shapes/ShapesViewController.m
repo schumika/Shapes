@@ -57,6 +57,8 @@
     [self.collectionView reloadData];
 }
 
+#pragma mark - UICollectionViewDataSource and Delegate methods
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return [self.currentShapes count];
 }
@@ -68,6 +70,12 @@
     
     return cell;
 }
+
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)sectio {
+    return UIEdgeInsetsZero;
+}
+
+#pragma mark - UITableViewDataSource and UITableViewDelegate methods
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [self.shapesArray count];
@@ -95,6 +103,8 @@
     [self menuButtonAction:nil];
 }
 
+#pragma mark - Properties
+
 - (void)setSelectedShapeTypeIndex:(NSInteger)selectedShapeTypeIndex {
     if (_selectedShapeTypeIndex != selectedShapeTypeIndex) {
         _selectedShapeTypeIndex = selectedShapeTypeIndex;
@@ -106,6 +116,8 @@
         [self.collectionView reloadData];
     }
 }
+
+#pragma mark - Button Actions
 
 - (IBAction)menuButtonAction:(id)sender {
     CGFloat menuHeight = (self.menuHeightConstraint.constant == 0.0) ? 75.0 : 0.0;
