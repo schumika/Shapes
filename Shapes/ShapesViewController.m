@@ -37,9 +37,12 @@
     
     self.collectionView.pagingEnabled = YES;
     
+    CGSize itemSize = [UIScreen mainScreen].bounds.size;
+    itemSize.height -= self.navigationController.navigationBar.bounds.size.height;
+    
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-    flowLayout.itemSize = [UIScreen mainScreen].bounds.size;
+    flowLayout.itemSize = itemSize;
     flowLayout.minimumInteritemSpacing = 0.0;
     [self.collectionView setCollectionViewLayout:flowLayout];
     
