@@ -179,24 +179,54 @@
                                     <action selector="clearButtonClicked:" destination="b46-WB-UZ9" eventType="touchUpInside" id="Xbg-Qc-LiJ"/>
                                 </connections>
                             </button>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="onO-BT-jzS">
+                                <rect key="frame" x="656" y="0.0" width="80" height="324"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="8Zx-7v-kas"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="b46-WB-UZ9" id="Umd-hs-lU8"/>
+                                    <outlet property="delegate" destination="b46-WB-UZ9" id="YBq-fj-0Xi"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xa4-7Y-LzS">
+                                <rect key="frame" x="672" y="320" width="64" height="30"/>
+                                <animations/>
+                                <state key="normal" title="▴Shapes"/>
+                                <connections>
+                                    <action selector="clearButtonClicked:" destination="b46-WB-UZ9" eventType="touchUpInside" id="uq4-MW-oks"/>
+                                    <action selector="shapesClicked:" destination="b46-WB-UZ9" eventType="touchUpInside" id="ycv-V5-9F7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Xa4-7Y-LzS" secondAttribute="trailing" id="4EK-Hi-ekE"/>
+                            <constraint firstItem="onO-BT-jzS" firstAttribute="trailing" secondItem="Xa4-7Y-LzS" secondAttribute="trailing" id="Chr-N1-dZS"/>
+                            <constraint firstItem="ETI-UJ-jAl" firstAttribute="top" secondItem="onO-BT-jzS" secondAttribute="bottom" constant="26" id="Nfc-Nn-GhX"/>
                             <constraint firstItem="XRH-3p-TWN" firstAttribute="leading" secondItem="yoW-rt-Y5j" secondAttribute="leading" id="XAb-cj-YBg"/>
                             <constraint firstItem="XRH-3p-TWN" firstAttribute="bottom" secondItem="ETI-UJ-jAl" secondAttribute="top" id="aXu-hn-hPZ"/>
+                            <constraint firstItem="onO-BT-jzS" firstAttribute="top" secondItem="M2H-9W-S62" secondAttribute="bottom" id="iCO-kj-GJC"/>
+                            <constraint firstItem="Xa4-7Y-LzS" firstAttribute="baseline" secondItem="XRH-3p-TWN" secondAttribute="baseline" id="vSu-Ti-Anv"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="bAS-Ll-Dq5" appends="YES" id="b7S-wH-n4X"/>
                         </connections>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
+                    <connections>
+                        <outlet property="tableView" destination="onO-BT-jzS" id="k1o-uW-5lk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Vi-bv-Tuo" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="bAS-Ll-Dq5">
                     <connections>
                         <action selector="handleTapGesture:" destination="b46-WB-UZ9" id="agQ-po-BEa"/>
+                        <outlet property="delegate" destination="b46-WB-UZ9" id="aGE-UC-m5A"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
