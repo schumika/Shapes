@@ -12,6 +12,8 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+- (NSArray *)categorizedShapes;
+- (NSArray *)allShapes;
 
 @end
 

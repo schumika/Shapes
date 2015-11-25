@@ -15,6 +15,8 @@
 		274C008A1C049DF0006AC592 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 274C00891C049DF0006AC592 /* Assets.xcassets */; };
 		274C008D1C049DF0006AC592 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 274C008B1C049DF0006AC592 /* LaunchScreen.storyboard */; };
 		274C00961C04A619006AC592 /* ShapeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 274C00951C04A619006AC592 /* ShapeCollectionViewCell.m */; };
+		2780000C1C0597290029D049 /* DrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2780000B1C0597290029D049 /* DrawViewController.m */; };
+		2780000F1C059D990029D049 /* ShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2780000E1C059D990029D049 /* ShapeView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,10 @@
 		274C008E1C049DF0006AC592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		274C00941C04A619006AC592 /* ShapeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapeCollectionViewCell.h; sourceTree = "<group>"; };
 		274C00951C04A619006AC592 /* ShapeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShapeCollectionViewCell.m; sourceTree = "<group>"; };
+		2780000A1C0597290029D049 /* DrawViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawViewController.h; sourceTree = "<group>"; };
+		2780000B1C0597290029D049 /* DrawViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawViewController.m; sourceTree = "<group>"; };
+		2780000D1C059D990029D049 /* ShapeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapeView.h; sourceTree = "<group>"; };
+		2780000E1C059D990029D049 /* ShapeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShapeView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,10 +74,14 @@
 				274C00811C049DF0006AC592 /* AppDelegate.m */,
 				274C00831C049DF0006AC592 /* ShapesViewController.h */,
 				274C00841C049DF0006AC592 /* ShapesViewController.m */,
+				2780000A1C0597290029D049 /* DrawViewController.h */,
+				2780000B1C0597290029D049 /* DrawViewController.m */,
 				274C00941C04A619006AC592 /* ShapeCollectionViewCell.h */,
 				274C00951C04A619006AC592 /* ShapeCollectionViewCell.m */,
 				2747EDC71C04C27800C5D469 /* MenuTableViewCell.h */,
 				2747EDC81C04C27800C5D469 /* MenuTableViewCell.m */,
+				2780000D1C059D990029D049 /* ShapeView.h */,
+				2780000E1C059D990029D049 /* ShapeView.m */,
 				274C00861C049DF0006AC592 /* Main.storyboard */,
 				274C00891C049DF0006AC592 /* Assets.xcassets */,
 				274C008B1C049DF0006AC592 /* LaunchScreen.storyboard */,
@@ -160,10 +170,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2780000C1C0597290029D049 /* DrawViewController.m in Sources */,
 				274C00961C04A619006AC592 /* ShapeCollectionViewCell.m in Sources */,
 				274C00851C049DF0006AC592 /* ShapesViewController.m in Sources */,
 				2747EDC91C04C27800C5D469 /* MenuTableViewCell.m in Sources */,
 				274C00821C049DF0006AC592 /* AppDelegate.m in Sources */,
+				2780000F1C059D990029D049 /* ShapeView.m in Sources */,
 				274C007F1C049DF0006AC592 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

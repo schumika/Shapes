@@ -122,6 +122,14 @@
                                     <action selector="menuButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n1r-BK-udC"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zS3-6X-iYj">
+                                <rect key="frame" x="5" y="0.0" width="36" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Draw"/>
+                                <connections>
+                                    <segue destination="b46-WB-UZ9" kind="show" id="wdC-QK-lFN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -150,6 +158,49 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1318" y="438"/>
+        </scene>
+        <!--Draw-->
+        <scene sceneID="rfe-m0-qaz">
+            <objects>
+                <viewController title="Draw" id="b46-WB-UZ9" customClass="DrawViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="M2H-9W-S62"/>
+                        <viewControllerLayoutGuide type="bottom" id="ETI-UJ-jAl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yoW-rt-Y5j">
+                        <rect key="frame" x="0.0" y="64" width="736" height="350"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XRH-3p-TWN">
+                                <rect key="frame" x="0.0" y="320" width="36" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="clearButtonClicked:" destination="b46-WB-UZ9" eventType="touchUpInside" id="Xbg-Qc-LiJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="XRH-3p-TWN" firstAttribute="leading" secondItem="yoW-rt-Y5j" secondAttribute="leading" id="XAb-cj-YBg"/>
+                            <constraint firstItem="XRH-3p-TWN" firstAttribute="bottom" secondItem="ETI-UJ-jAl" secondAttribute="top" id="aXu-hn-hPZ"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="bAS-Ll-Dq5" appends="YES" id="b7S-wH-n4X"/>
+                        </connections>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Vi-bv-Tuo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="bAS-Ll-Dq5">
+                    <connections>
+                        <action selector="handleTapGesture:" destination="b46-WB-UZ9" id="agQ-po-BEa"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1318" y="1043"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8YO-hR-lZ5">

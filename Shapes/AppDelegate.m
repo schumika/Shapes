@@ -10,6 +10,8 @@
 
 @interface AppDelegate ()
 
+@property (nonatomic, strong) NSArray *shapesArray;
+
 @end
 
 @implementation AppDelegate
@@ -40,6 +42,30 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (NSArray *)allShapes {
+    NSMutableArray *shapes = [NSMutableArray array];
+    for (NSDictionary *dict in [self categorizedShapes]) {
+        for (NSString *shape in dict[@"Shapes"]) {
+            [shapes addObject:shape];
+        }
+    }
+    
+    return shapes;
+}
+
+- (NSArray *)categorizedShapes {
+    if (!self.shapesArray) {
+        self.shapesArray =  @[@{@"Type":@"Animals",
+                                @"Shapes":@[@"🐶", @"🐱", @"🐭", @"🐰", @"🐻", @"🦁", @"🐮", @"🐷", @"🐸", @"🐔", @"🐣", @"🐝", @"🐛", @"🐌", @"🐞", @"🐜", @"🐟", @"🐘", @"🐫", @"🐑"]},
+                              @{@"Type":@"Food",
+                                @"Shapes":@[@"🍎", @"🍐", @"🍊" ,@"🍋", @"🍌", @"🍉", @"🍇", @"🍓", @"🍒", @"🍍"]},
+                              @{@"Type":@"Transport",
+                                @"Shapes":@[@"🚗", @"🚌", @"🚎", @"🚕", @"🚑", @"🚒", @"🚜", @"🚚", @"🏍", @"🚁", @"✈️", @"🚉", @"⛵️"]}];
+    }
+    
+    return self.shapesArray;
 }
 
 @end

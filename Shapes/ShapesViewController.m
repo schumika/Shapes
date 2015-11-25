@@ -9,6 +9,8 @@
 #import "ShapesViewController.h"
 #import "ShapeCollectionViewCell.h"
 #import "MenuTableViewCell.h"
+#import "DrawViewController.h"
+#import "AppDelegate.h"
 
 @interface ShapesViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UITableViewDataSource, UITableViewDelegate>
 
@@ -28,12 +30,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.shapesArray = @[@{@"Type":@"Animals",
-                           @"Shapes":@[@"🐶", @"🐱", @"🐭", @"🐰", @"🐻", @"🦁", @"🐮", @"🐷", @"🐸", @"🐔", @"🐣", @"🐝", @"🐛", @"🐌", @"🐞", @"🐜", @"🐟", @"🐘", @"🐫", @"🐑"]},
-                         @{@"Type":@"Food",
-                           @"Shapes":@[@"🍎", @"🍐", @"🍊" ,@"🍋", @"🍌", @"🍉", @"🍇", @"🍓", @"🍒", @"🍍"]},
-                         @{@"Type":@"Transport",
-                           @"Shapes":@[@"🚗", @"🚌", @"🚎", @"🚕", @"🚑", @"🚒", @"🚜", @"🚚", @"🏍", @"🚁", @"✈️", @"🚉", @"⛵️"]}];
+    self.shapesArray = [(AppDelegate *)[UIApplication sharedApplication].delegate categorizedShapes];
     
     self.collectionView.pagingEnabled = YES;
     
