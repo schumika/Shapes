@@ -196,7 +196,6 @@
                                 <animations/>
                                 <state key="normal" title="▴Shapes"/>
                                 <connections>
-                                    <action selector="clearButtonClicked:" destination="b46-WB-UZ9" eventType="touchUpInside" id="uq4-MW-oks"/>
                                     <action selector="shapesClicked:" destination="b46-WB-UZ9" eventType="touchUpInside" id="ycv-V5-9F7"/>
                                 </connections>
                             </button>

@@ -16,7 +16,7 @@ static CGSize kShapeSize = (CGSize){100.0, 120.0};
     self = [super initWithFrame:(CGRect){CGPointZero, kShapeSize}];
     _shape = shape;
     self.text = _shape;
-    self.font = [UIFont systemFontOfSize:100.0];
+    self.font = [UIFont systemFontOfSize:80.0];
     
     return self;
 }
