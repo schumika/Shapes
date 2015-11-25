@@ -7,6 +7,7 @@
 //
 
 #import "ShapeView.h"
+#import "UIColorAdditions.h"
 
 @implementation ShapeView
 
@@ -17,6 +18,7 @@ static CGSize kShapeSize = (CGSize){100.0, 120.0};
     _shape = shape;
     self.text = _shape;
     self.font = [UIFont systemFontOfSize:80.0];
+    self.textColor = [UIColor randomColor];
     
     return self;
 }

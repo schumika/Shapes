@@ -7,7 +7,13 @@
 //
 
 #import "ShapeCollectionViewCell.h"
+#import "UIColorAdditions.h"
+
 
 @implementation ShapeCollectionViewCell
+
+- (void)awakeFromNib {
+    self.shapeLabel.textColor = [UIColor randomColor];
+}
 
 @end

@@ -73,8 +73,7 @@
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
     if ([touch.view isDescendantOfView:self.tableView]) {
         
-        // Don't let selections of auto-complete entries fire the
-        // gesture recognizer
+        // Don't let selections of table cells fire the gesture recognizer
         return NO;
     }
     
@@ -93,6 +92,9 @@
 
 - (IBAction)shapesClicked:(id)sender {
     self.tableView.hidden = !self.tableView.hidden;
+    if (!self.tableView.hidden) {
+        [self.view bringSubviewToFront:self.tableView];
+    }
 }
 
 @end

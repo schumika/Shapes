@@ -120,12 +120,12 @@
 #pragma mark - Button Actions
 
 - (IBAction)menuButtonAction:(id)sender {
-    CGFloat menuHeight = (self.menuHeightConstraint.constant == 0.0) ? 75.0 : 0.0;
+    CGFloat menuHeight = (self.menuHeightConstraint.constant == 0.0) ? 100.0 : 0.0;
     
     CGRect finalFrame = self.menuTableView.frame;
     finalFrame.size.height = menuHeight;
     
-    [UIView animateWithDuration:0.3
+    [UIView animateWithDuration:0.1
                           delay:0.0
                         options:UIViewAnimationOptionCurveEaseInOut
                      animations:^{

@@ -172,7 +172,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XRH-3p-TWN">
-                                <rect key="frame" x="0.0" y="320" width="36" height="30"/>
+                                <rect key="frame" x="8" y="320" width="36" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Clear"/>
                                 <connections>
@@ -180,7 +180,7 @@
                                 </connections>
                             </button>
                             <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="onO-BT-jzS">
-                                <rect key="frame" x="656" y="0.0" width="80" height="324"/>
+                                <rect key="frame" x="648" y="0.0" width="80" height="324"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -192,7 +192,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xa4-7Y-LzS">
-                                <rect key="frame" x="672" y="320" width="64" height="30"/>
+                                <rect key="frame" x="664" y="320" width="64" height="30"/>
                                 <animations/>
                                 <state key="normal" title="▴Shapes"/>
                                 <connections>
@@ -204,10 +204,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Xa4-7Y-LzS" secondAttribute="trailing" id="4EK-Hi-ekE"/>
+                            <constraint firstAttribute="trailing" secondItem="Xa4-7Y-LzS" secondAttribute="trailing" constant="8" id="4EK-Hi-ekE"/>
                             <constraint firstItem="onO-BT-jzS" firstAttribute="trailing" secondItem="Xa4-7Y-LzS" secondAttribute="trailing" id="Chr-N1-dZS"/>
                             <constraint firstItem="ETI-UJ-jAl" firstAttribute="top" secondItem="onO-BT-jzS" secondAttribute="bottom" constant="26" id="Nfc-Nn-GhX"/>
-                            <constraint firstItem="XRH-3p-TWN" firstAttribute="leading" secondItem="yoW-rt-Y5j" secondAttribute="leading" id="XAb-cj-YBg"/>
+                            <constraint firstItem="XRH-3p-TWN" firstAttribute="leading" secondItem="yoW-rt-Y5j" secondAttribute="leading" constant="8" id="XAb-cj-YBg"/>
                             <constraint firstItem="XRH-3p-TWN" firstAttribute="bottom" secondItem="ETI-UJ-jAl" secondAttribute="top" id="aXu-hn-hPZ"/>
                             <constraint firstItem="onO-BT-jzS" firstAttribute="top" secondItem="M2H-9W-S62" secondAttribute="bottom" id="iCO-kj-GJC"/>
                             <constraint firstItem="Xa4-7Y-LzS" firstAttribute="baseline" secondItem="XRH-3p-TWN" secondAttribute="baseline" id="vSu-Ti-Anv"/>
