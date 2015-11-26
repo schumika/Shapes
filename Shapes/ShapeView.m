@@ -20,7 +20,17 @@ static CGSize kShapeSize = (CGSize){100.0, 120.0};
     self.font = [UIFont systemFontOfSize:80.0];
     self.textColor = [UIColor randomColor];
     
+    UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
+    [self addGestureRecognizer:panGestureRecognizer];
+    
     return self;
+}
+
+- (void)handlePanGesture:(UIPanGestureRecognizer *)panGesture {
+    if (panGesture.state == UIGestureRecognizerStateChanged) {
+        CGPoint point = [panGesture locationInView:self.superview];
+        self.center = point;
+    }
 }
 
 @end
