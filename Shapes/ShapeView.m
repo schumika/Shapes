@@ -19,6 +19,7 @@ static CGSize kShapeSize = (CGSize){100.0, 120.0};
     self.text = _shape;
     self.font = [UIFont systemFontOfSize:80.0];
     self.textColor = [UIColor randomColor];
+    self.userInteractionEnabled = YES;
     
     UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
     [self addGestureRecognizer:panGestureRecognizer];

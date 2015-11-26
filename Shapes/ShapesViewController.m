@@ -120,7 +120,7 @@
 #pragma mark - Button Actions
 
 - (IBAction)menuButtonAction:(id)sender {
-    CGFloat menuHeight = (self.menuHeightConstraint.constant == 0.0) ? 100.0 : 0.0;
+    CGFloat menuHeight = (self.menuHeightConstraint.constant == 0.0) ? (35.0 * [self.shapesArray count]) : 0.0;
     
     CGRect finalFrame = self.menuTableView.frame;
     finalFrame.size.height = menuHeight;
