@@ -7,16 +7,15 @@
 //
 
 #import "UIColorAdditions.h"
-#include <stdlib.h>
 
 
 @implementation UIColor(UIColorAdditions)
 
 + (UIColor *)randomColor {
 
-    int red = rand() % 255;
-    int blue = rand() % 255;
-    int green = rand() % 255;
+    NSUInteger red = arc4random_uniform(256);
+    NSUInteger blue = arc4random_uniform(256);
+    NSUInteger green = arc4random_uniform(256);
     
     return [UIColor colorWithRed:red/255.0 green:green/255.0 blue:blue/255.0 alpha:1.0];
 }
