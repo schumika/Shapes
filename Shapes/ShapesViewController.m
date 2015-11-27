@@ -25,6 +25,8 @@
 @property (weak, nonatomic) IBOutlet UITableView *menuTableView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *menuHeightConstraint;
 
+@property (assign, nonatomic) SystemSoundID animalSound;
+
 @end
 
 @implementation ShapesViewController
@@ -124,16 +126,33 @@
 
 - (IBAction)handleTapGesture:(UITapGestureRecognizer *)sender {
     if (sender.state == UIGestureRecognizerStateRecognized) {
-        //NSLog(@"sender.view: %@", sender.view);
         if ([sender.view isKindOfClass:[UILabel class]]) {
             UILabel *tappedLabel = (UILabel *)sender.view;
-            if ([tappedLabel.text isEqualToString:@"🐶"]) {
-                NSLog(@"play dog sound");
-                NSString *path = [[NSBundle mainBundle] pathForResource:@"Dog bark" ofType:@"wav"];
-                NSURL *url = [[NSURL alloc] initFileURLWithPath: path];
-                
-                AVPlayer *player = [[AVPlayer alloc] initWithURL:url];
-                [player play];
+            NSString *labelText = tappedLabel.text;
+            NSString *soundName = nil;
+            if ([labelText isEqualToString:@"🐶"]) {
+                soundName = @"Dog bark";
+            } else if ([labelText isEqualToString:@"🐱"]) {
+                soundName = @"Cat meow";
+            } else if ([labelText isEqualToString:@"🐄"]) {
+                soundName = @"Cow moo";
+            } else if ([labelText isEqualToString:@"🐴"]) {
+                soundName = @"Horse walking by";
+            } else if ([labelText isEqualToString:@"🐓"]) {
+                soundName = @"Rooster";
+            } else if ([labelText isEqualToString:@"🦁"]) {
+                soundName = @"Lion roar";
+            } else if ([labelText isEqualToString:@"🐘"]) {
+                soundName = @"Elephant";
+            } else if ([labelText isEqualToString:@"🐏"]) {
+                soundName = @"Sheep";
+            }
+            
+            if (soundName) {
+                NSString *pewPewPath = [[NSBundle mainBundle] pathForResource:soundName ofType:@"wav"];
+                NSURL *pewPewURL = [NSURL fileURLWithPath:pewPewPath];
+                AudioServicesCreateSystemSoundID((__bridge CFURLRef)pewPewURL, &_animalSound);
+                AudioServicesPlaySystemSound(self.animalSound);
             }
         }
     }
