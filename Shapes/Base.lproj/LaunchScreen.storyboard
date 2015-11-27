@@ -4,7 +4,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,52 +15,69 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shapes" translatesAutoresizingMaskIntoConstraints="NO" id="vo1-bt-T0l">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fun With" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yM9-lR-rNh">
-                                <rect key="frame" x="0.0" y="5" width="1024" height="384"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0e5-xS-5yK">
+                                <rect key="frame" x="412" y="338" width="542" height="348"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Shapes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLj-Si-ivG">
+                                        <rect key="frame" x="22" y="147" width="499" height="201"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="499" id="5my-jv-Ipb"/>
+                                            <constraint firstAttribute="height" constant="201" id="jcc-bZ-pYU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="130"/>
+                                        <color key="textColor" red="0.11613690290000001" green="0.15904688729999999" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fun With" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yM9-lR-rNh">
+                                        <rect key="frame" x="6" y="8" width="531" height="190"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="531" id="8la-kp-xGN"/>
+                                            <constraint firstAttribute="height" constant="190" id="QZ5-4P-jSH"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="120"/>
+                                        <color key="textColor" red="0.11613690291032175" green="0.15904688734119449" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <animations/>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="120"/>
-                                <color key="textColor" red="0.11613690291032175" green="0.15904688734119449" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shapes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLj-Si-ivG">
-                                <rect key="frame" x="0.0" y="380" width="1024" height="384"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="120"/>
-                                <color key="textColor" red="0.11613690290000001" green="0.15904688729999999" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="BLj-Si-ivG" secondAttribute="bottom" id="1wf-cK-Qqq"/>
+                                    <constraint firstItem="yM9-lR-rNh" firstAttribute="top" secondItem="0e5-xS-5yK" secondAttribute="top" constant="8" id="GAJ-Qu-vGx"/>
+                                    <constraint firstAttribute="height" constant="348" id="Qkh-Yn-A9x"/>
+                                    <constraint firstItem="BLj-Si-ivG" firstAttribute="centerX" secondItem="0e5-xS-5yK" secondAttribute="centerX" id="VKs-fo-JIj"/>
+                                    <constraint firstAttribute="width" constant="542" id="VMN-EA-X8e"/>
+                                    <constraint firstItem="yM9-lR-rNh" firstAttribute="centerX" secondItem="0e5-xS-5yK" secondAttribute="centerX" id="izS-hW-hFK"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="BLj-Si-ivG" secondAttribute="trailing" constant="-20" id="EHY-l6-WFS"/>
-                            <constraint firstItem="BLj-Si-ivG" firstAttribute="top" secondItem="yM9-lR-rNh" secondAttribute="bottom" constant="-9" id="IHu-VD-dkg"/>
-                            <constraint firstAttribute="trailing" secondItem="vo1-bt-T0l" secondAttribute="trailing" id="NUN-ae-2QK"/>
-                            <constraint firstItem="vo1-bt-T0l" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Q1m-aC-lXS"/>
-                            <constraint firstItem="yM9-lR-rNh" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="1:2" id="cLO-WK-AwQ"/>
-                            <constraint firstItem="vo1-bt-T0l" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="gNZ-UE-bVf"/>
-                            <constraint firstItem="yM9-lR-rNh" firstAttribute="top" secondItem="vo1-bt-T0l" secondAttribute="top" constant="5" id="jH3-1e-YPk"/>
-                            <constraint firstItem="yM9-lR-rNh" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-20" id="jjX-C4-T37"/>
-                            <constraint firstItem="BLj-Si-ivG" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-20" id="mGL-1v-z53"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="yM9-lR-rNh" secondAttribute="trailing" constant="-20" id="pby-Rx-nt1"/>
-                            <constraint firstItem="BLj-Si-ivG" firstAttribute="height" secondItem="vo1-bt-T0l" secondAttribute="height" multiplier="1:2" id="txf-dj-cax"/>
-                            <constraint firstItem="vo1-bt-T0l" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="urb-Tp-hFo"/>
+                            <constraint firstItem="0e5-xS-5yK" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="0Ni-l8-fBX"/>
+                            <constraint firstItem="0e5-xS-5yK" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="0rU-dA-Xh5"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="vo1-bt-T0l" secondAttribute="bottom" id="7zA-T3-pTF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vo1-bt-T0l" secondAttribute="trailing" constant="-20" id="8hy-v2-k7e"/>
+                            <constraint firstItem="vo1-bt-T0l" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="-20" id="Lec-3n-URA"/>
+                            <constraint firstItem="vo1-bt-T0l" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-20" id="iaN-Y0-nBO"/>
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPadPro"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="250" y="104"/>
         </scene>
     </scenes>
     <resources>
