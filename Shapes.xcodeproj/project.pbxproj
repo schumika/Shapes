@@ -15,6 +15,17 @@
 		274C008A1C049DF0006AC592 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 274C00891C049DF0006AC592 /* Assets.xcassets */; };
 		274C008D1C049DF0006AC592 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 274C008B1C049DF0006AC592 /* LaunchScreen.storyboard */; };
 		274C00961C04A619006AC592 /* ShapeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 274C00951C04A619006AC592 /* ShapeCollectionViewCell.m */; };
+		275803AD1C084126000A1AD8 /* Dog bark.wav in Resources */ = {isa = PBXBuildFile; fileRef = 275803AC1C084126000A1AD8 /* Dog bark.wav */; };
+		275803B01C08415F000A1AD8 /* Cat meow.wav in Resources */ = {isa = PBXBuildFile; fileRef = 275803AF1C08415F000A1AD8 /* Cat meow.wav */; };
+		275803B21C08418D000A1AD8 /* Cow moo.wav in Resources */ = {isa = PBXBuildFile; fileRef = 275803B11C08418D000A1AD8 /* Cow moo.wav */; };
+		275803B41C0841B7000A1AD8 /* Horse walking by.wav in Resources */ = {isa = PBXBuildFile; fileRef = 275803B31C0841B7000A1AD8 /* Horse walking by.wav */; };
+		275803B61C0841DE000A1AD8 /* Pig squeal.wav in Resources */ = {isa = PBXBuildFile; fileRef = 275803B51C0841DE000A1AD8 /* Pig squeal.wav */; };
+		275803B81C0841F9000A1AD8 /* Lion roar.wav in Resources */ = {isa = PBXBuildFile; fileRef = 275803B71C0841F9000A1AD8 /* Lion roar.wav */; };
+		275803BA1C08420D000A1AD8 /* Rooster.wav in Resources */ = {isa = PBXBuildFile; fileRef = 275803B91C08420D000A1AD8 /* Rooster.wav */; };
+		275803BC1C08421E000A1AD8 /* Duck quacking.wav in Resources */ = {isa = PBXBuildFile; fileRef = 275803BB1C08421E000A1AD8 /* Duck quacking.wav */; };
+		275803BE1C084230000A1AD8 /* Elephant.wav in Resources */ = {isa = PBXBuildFile; fileRef = 275803BD1C084230000A1AD8 /* Elephant.wav */; };
+		275803C81C0846ED000A1AD8 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 275803C71C0846ED000A1AD8 /* AVKit.framework */; };
+		275803CA1C0846F3000A1AD8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 275803C91C0846F3000A1AD8 /* AVFoundation.framework */; };
 		2780000C1C0597290029D049 /* DrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2780000B1C0597290029D049 /* DrawViewController.m */; };
 		2780000F1C059D990029D049 /* ShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2780000E1C059D990029D049 /* ShapeView.m */; };
 		278000261C05D1B60029D049 /* UIColorAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 278000251C05D1B60029D049 /* UIColorAdditions.m */; };
@@ -35,6 +46,17 @@
 		274C008E1C049DF0006AC592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		274C00941C04A619006AC592 /* ShapeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapeCollectionViewCell.h; sourceTree = "<group>"; };
 		274C00951C04A619006AC592 /* ShapeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShapeCollectionViewCell.m; sourceTree = "<group>"; };
+		275803AC1C084126000A1AD8 /* Dog bark.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "Dog bark.wav"; path = "Sounds/Dog bark.wav"; sourceTree = "<group>"; };
+		275803AF1C08415F000A1AD8 /* Cat meow.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Cat meow.wav"; sourceTree = "<group>"; };
+		275803B11C08418D000A1AD8 /* Cow moo.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Cow moo.wav"; sourceTree = "<group>"; };
+		275803B31C0841B7000A1AD8 /* Horse walking by.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Horse walking by.wav"; sourceTree = "<group>"; };
+		275803B51C0841DE000A1AD8 /* Pig squeal.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Pig squeal.wav"; sourceTree = "<group>"; };
+		275803B71C0841F9000A1AD8 /* Lion roar.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Lion roar.wav"; sourceTree = "<group>"; };
+		275803B91C08420D000A1AD8 /* Rooster.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Rooster.wav; sourceTree = "<group>"; };
+		275803BB1C08421E000A1AD8 /* Duck quacking.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Duck quacking.wav"; sourceTree = "<group>"; };
+		275803BD1C084230000A1AD8 /* Elephant.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Elephant.wav; path = ../../../../Downloads/Elephant.wav; sourceTree = "<group>"; };
+		275803C71C0846ED000A1AD8 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		275803C91C0846F3000A1AD8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		2780000A1C0597290029D049 /* DrawViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawViewController.h; sourceTree = "<group>"; };
 		2780000B1C0597290029D049 /* DrawViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawViewController.m; sourceTree = "<group>"; };
 		2780000D1C059D990029D049 /* ShapeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapeView.h; sourceTree = "<group>"; };
@@ -48,6 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				275803CA1C0846F3000A1AD8 /* AVFoundation.framework in Frameworks */,
+				275803C81C0846ED000A1AD8 /* AVKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +115,7 @@
 				274C00891C049DF0006AC592 /* Assets.xcassets */,
 				274C008B1C049DF0006AC592 /* LaunchScreen.storyboard */,
 				274C008E1C049DF0006AC592 /* Info.plist */,
+				275803AE1C08412A000A1AD8 /* Sounds */,
 				274C007D1C049DF0006AC592 /* Supporting Files */,
 			);
 			path = Shapes;
@@ -99,9 +124,27 @@
 		274C007D1C049DF0006AC592 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				275803C71C0846ED000A1AD8 /* AVKit.framework */,
+				275803C91C0846F3000A1AD8 /* AVFoundation.framework */,
 				274C007E1C049DF0006AC592 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		275803AE1C08412A000A1AD8 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				275803AC1C084126000A1AD8 /* Dog bark.wav */,
+				275803AF1C08415F000A1AD8 /* Cat meow.wav */,
+				275803B11C08418D000A1AD8 /* Cow moo.wav */,
+				275803B31C0841B7000A1AD8 /* Horse walking by.wav */,
+				275803B51C0841DE000A1AD8 /* Pig squeal.wav */,
+				275803B71C0841F9000A1AD8 /* Lion roar.wav */,
+				275803B91C08420D000A1AD8 /* Rooster.wav */,
+				275803BB1C08421E000A1AD8 /* Duck quacking.wav */,
+				275803BD1C084230000A1AD8 /* Elephant.wav */,
+			);
+			name = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,7 +206,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				274C008D1C049DF0006AC592 /* LaunchScreen.storyboard in Resources */,
+				275803BA1C08420D000A1AD8 /* Rooster.wav in Resources */,
+				275803B61C0841DE000A1AD8 /* Pig squeal.wav in Resources */,
+				275803B21C08418D000A1AD8 /* Cow moo.wav in Resources */,
 				274C008A1C049DF0006AC592 /* Assets.xcassets in Resources */,
+				275803B01C08415F000A1AD8 /* Cat meow.wav in Resources */,
+				275803AD1C084126000A1AD8 /* Dog bark.wav in Resources */,
+				275803B41C0841B7000A1AD8 /* Horse walking by.wav in Resources */,
+				275803B81C0841F9000A1AD8 /* Lion roar.wav in Resources */,
+				275803BE1C084230000A1AD8 /* Elephant.wav in Resources */,
+				275803BC1C08421E000A1AD8 /* Duck quacking.wav in Resources */,
 				274C00881C049DF0006AC592 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

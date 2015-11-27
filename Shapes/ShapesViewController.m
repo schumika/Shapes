@@ -6,6 +6,8 @@
 //  Copyright © 2015 Anca Julean. All rights reserved.
 //
 
+#import <AVFoundation/AVFoundation.h>
+
 #import "ShapesViewController.h"
 #import "ShapeCollectionViewCell.h"
 #import "MenuTableViewCell.h"
@@ -114,6 +116,26 @@
         
         [self.menuTableView reloadData];
         [self.collectionView reloadData];
+    }
+}
+
+#pragma mark - Gesture handlers
+
+
+- (IBAction)handleTapGesture:(UITapGestureRecognizer *)sender {
+    if (sender.state == UIGestureRecognizerStateRecognized) {
+        //NSLog(@"sender.view: %@", sender.view);
+        if ([sender.view isKindOfClass:[UILabel class]]) {
+            UILabel *tappedLabel = (UILabel *)sender.view;
+            if ([tappedLabel.text isEqualToString:@"🐶"]) {
+                NSLog(@"play dog sound");
+                NSString *path = [[NSBundle mainBundle] pathForResource:@"Dog bark" ofType:@"wav"];
+                NSURL *url = [[NSURL alloc] initFileURLWithPath: path];
+                
+                AVPlayer *player = [[AVPlayer alloc] initWithURL:url];
+                [player play];
+            }
+        }
     }
 }
 
