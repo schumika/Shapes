@@ -14,6 +14,15 @@
 
 - (void)awakeFromNib {
     self.shapeLabel.textColor = [UIColor randomColor];
+    
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGesture:)];
+    [self.shapeLabel addGestureRecognizer:tapGesture];
+}
+
+- (void)handleTapGesture:(UITapGestureRecognizer *)tapGestureRecognizer {
+    if ([self.delegate respondsToSelector:@selector(shapeCellTapped:)]) {
+        [self.delegate shapeCellTapped:self];
+    }
 }
 
 @end

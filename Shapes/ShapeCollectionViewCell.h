@@ -8,8 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol ShapeCollectionViewCellDelegate;
+
+
 @interface ShapeCollectionViewCell : UICollectionViewCell
 
 @property (nonatomic, weak) IBOutlet UILabel *shapeLabel;
+@property (nonatomic, assign) id<ShapeCollectionViewCellDelegate> delegate;
+
+@end
+
+
+@protocol ShapeCollectionViewCellDelegate <NSObject>
+
+- (void)shapeCellTapped:(ShapeCollectionViewCell *)cell;
 
 @end

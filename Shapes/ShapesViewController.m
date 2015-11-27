@@ -14,7 +14,7 @@
 #import "DrawViewController.h"
 #import "AppDelegate.h"
 
-@interface ShapesViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UITableViewDataSource, UITableViewDelegate>
+@interface ShapesViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UITableViewDataSource, UITableViewDelegate, ShapeCollectionViewCellDelegate>
 
 @property (nonatomic, strong) NSArray *shapesArray;
 @property (nonatomic, assign) NSInteger selectedIndex;
@@ -69,6 +69,7 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     ShapeCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ShapeCollectionViewCell" forIndexPath:indexPath];
+    cell.delegate = self;
     
     cell.shapeLabel.text = self.currentShapes[indexPath.row];
     
@@ -105,6 +106,37 @@
     self.selectedShapeTypeIndex = indexPath.row;
     
     [self menuButtonAction:nil];
+}
+
+- (void)shapeCellTapped:(ShapeCollectionViewCell *)cell {
+    UILabel *label = cell.shapeLabel;
+    NSString *labelText = label.text;
+    
+    NSString *soundName = nil;
+    if ([labelText isEqualToString:@"🐶"]) {
+        soundName = @"Dog bark";
+    } else if ([labelText isEqualToString:@"🐱"]) {
+        soundName = @"Cat meow";
+    } else if ([labelText isEqualToString:@"🐄"]) {
+        soundName = @"Cow moo";
+    } else if ([labelText isEqualToString:@"🐴"]) {
+        soundName = @"Horse walking by";
+    } else if ([labelText isEqualToString:@"🐓"]) {
+        soundName = @"Rooster";
+    } else if ([labelText isEqualToString:@"🦁"]) {
+        soundName = @"Lion roar";
+    } else if ([labelText isEqualToString:@"🐘"]) {
+        soundName = @"Elephant";
+    } else if ([labelText isEqualToString:@"🐏"]) {
+        soundName = @"Sheep";
+    }
+    
+    if (soundName) {
+        NSString *pewPewPath = [[NSBundle mainBundle] pathForResource:soundName ofType:@"wav"];
+        NSURL *pewPewURL = [NSURL fileURLWithPath:pewPewPath];
+        AudioServicesCreateSystemSoundID((__bridge CFURLRef)pewPewURL, &_animalSound);
+        AudioServicesPlaySystemSound(self.animalSound);
+    }
 }
 
 #pragma mark - Properties
